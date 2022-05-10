@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="DialogueWindows\FileNotSavedWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogueWindows\FindRecordWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogueWindows\TranslationMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DialogueWindows\FileNotSavedWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogueWindows\FindRecordWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogueWindows\TranslationMessageBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

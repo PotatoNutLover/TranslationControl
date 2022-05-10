@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Controls\SaveImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PotatoTranslationControl.Core\PotatoTranslationControl.Core.csproj" />
+    <ProjectReference Include="..\PotatoTranslationControl.Editor\PotatoTranslationControl.Editor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Controls\SaveImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Resources\Styles\DefaultStyle.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+</Project>

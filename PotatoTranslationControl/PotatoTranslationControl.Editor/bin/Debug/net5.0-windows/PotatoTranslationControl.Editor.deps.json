@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "PotatoTranslationControl.Editor/1.0.0": {
+        "dependencies": {
+          "PotatoTranslationControl.Core": "1.0.0"
+        },
+        "runtime": {
+          "PotatoTranslationControl.Editor.dll": {}
+        }
+      },
+      "PotatoTranslationControl.Core/1.0.0": {
+        "runtime": {
+          "PotatoTranslationControl.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PotatoTranslationControl.Editor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PotatoTranslationControl.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

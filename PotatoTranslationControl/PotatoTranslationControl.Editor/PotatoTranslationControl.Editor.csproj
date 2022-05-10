@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DeleteImg.png" />
+    <None Remove="DialogueWindows\AlertImage.png" />
+    <None Remove="ExplorerImg.png" />
+    <None Remove="FindImg.png" />
+    <None Remove="Icon.ico" />
+    <None Remove="RedoImg.png" />
+    <None Remove="SaveImg.png" />
+    <None Remove="UndoImg.png" />
+    <None Remove="UpdateImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PotatoTranslationControl.Core\PotatoTranslationControl.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DialogueWindows\AlertImage.png" />
+    <Resource Include="Icon.ico" />
+    <Resource Include="Resources\Images\DeleteImg.png" />
+    <Resource Include="Resources\Images\ExplorerImg.png" />
+    <Resource Include="Resources\Images\FindImg.png" />
+    <Resource Include="Resources\Images\RedoImg.png" />
+    <Resource Include="Resources\Images\SaveImg.png" />
+    <Resource Include="Resources\Images\UndoImg.png" />
+    <Resource Include="Resources\Images\UpdateImg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Resources\Styles\DefaultStyle.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+</Project>

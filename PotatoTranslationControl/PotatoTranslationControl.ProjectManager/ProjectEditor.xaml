@@ -1,0 +1,73 @@
+﻿<Window x:Class="PotatoTranslationControl.ProjectManager.ProjectEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PotatoTranslationControl.ProjectManager"
+        xmlns:translationFileElement ="clr-namespace:PotatoTranslationControl.ProjectManager.Controls" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" Style="{StaticResource WindowDefault}" MinHeight="500" MinWidth="800">
+    <Grid Style="{StaticResource GridMain}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="180*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="ProjectName" Grid.Row="1" VerticalAlignment="Center" Text="Test project name" Height="32"/>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Basic translation file"/>
+                <StackPanel Grid.Row="1" x:Name="BasicTranslationPlace"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="150*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Additional translation files"/>
+                <ListBox Grid.Row="1" Name="AdditionalTranslationsListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Margin="0 10 0 0" FlowDirection="LeftToRight"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    
+                    
+                </ListBox>
+            </Grid>
+        </Grid>
+        
+        <StackPanel Grid.Column="1">
+            <Button x:Name="ButtonAddNewTranslation" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonAddNewTranslation_Click">
+                <TextBlock Text="Add new translation" />
+            </Button>
+            <Button x:Name="ButtonAddTranslation" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonAddTranslation_Click">
+                <TextBlock Text="Add translation" />
+            </Button>
+            <Button x:Name="ButtonDeleteTranslation" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonDeleteTranslation_Click">
+                <TextBlock Text="Delete translation" />
+            </Button>
+            <Button x:Name="ButtonOpenTranslation" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonOpenTranslation_Click">
+                <TextBlock Text="Open translation" />
+            </Button>
+            <Button x:Name="ButtonSetAsBasicTranslation" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonSetAsBasicTranslation_Click">
+                <TextBlock Text="Set as basic translation" TextWrapping="Wrap"/>
+            </Button>
+            <Button x:Name="ButtonOpenProjectInExplorer" Height="50" VerticalAlignment="Top" Margin="0 0 0 10" Click="ButtonOpenProjectInExplorer_Click">
+                <TextBlock Text="Open project in explorer"  TextWrapping="Wrap"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
